@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 60px;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+<div><br></div>
+<div style="text-align:center">
+  <h2>church sechdule</h2>
+  <p>Click on below to get details:</p>
+</div>
+
+<!-- Three columns -->
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:grey;">
+    Church Timing Details
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:skyblue;">
+     Leader&Youth Meeting Details
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:#09386B;">
+    Ongoing/Upcoming Events
+  </div>
+</div>
+
+<!-- Full-width columns: (hidden by default) -->
+<div id="b1" class="containerTab" style="display:none;background:grey">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  
+
+ <font color="Black"><p><h2>Morning Sevices</h2></font>
+ <center>   <h2>Timing:: Sunday-9:30am-11:30am</h2></center>
+
+<font color="Black"><h2>Evening Sevices</h2></font>
+      <center><h2>Timing:: Sunday-7:30pm-9:30pm</h2></center>
+  </p>
+  <img src="{% static 'image/service.jpg' %}" width="1200" height="550">
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:skyblue">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+ 
+ <font color="red"> <h4>Leader Meeting </h4></font>
+  <p>
+    <h2>Day&Timing:: Friday-9:30am-11:30am</h2>
+  </p>
+  <font color="Black"> <center><h2>Youth Meeting</h2></center></font>
+  <h2>Day&Timing:: Saturday-7:30pm-9:30pm</h2>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:#09386B">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+ <font  size="14"><center> <h2>Ongoing Events</h2></center></font>
+  <p>
+  <font size="12" color="green">VBS for childern Development </p></font>
+ <font size='14' color=><center> <h2>Upcomming Events</h2></center></font>
+  <font color="Black" size="12">it will update soon... </font>
+</div>
+
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+<div>
+  <Br>
+</div>
+
+<footer class="container-fluid text-center">
+  <h2>ConnectChurch Pune,India</h2>    
+</footer>
+</body>
+</html> 
+
+
+
+{% endblock %}

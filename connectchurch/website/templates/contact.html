@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>stay connect... stay bless.. stay happy..</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="{% static 'image/1.jpg' %}" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="{% url 'contact' %}" method="post">
+      {% csrf_token %}
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+       <label for="tele">Telephone</label>
+        <input type="text" id="tele" name="telephone" placeholder="Your Telephone..">
+       <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your email..">
+       
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write subject like prayer.." style="width: :150px" ></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+<div>
+  <br>
+</div>
+
+<footer class="container-fluid text-center">
+  <h2>ConnectChurch Pune,India</h2>
+    <p>contact no.9191919158</p>
+    <p>email id:connectchurch@gmail.com</p>
+  </p>
+</footer>
+{% endblock %}
