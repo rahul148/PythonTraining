@@ -1,0 +1,39 @@
+1))$ git clone https://github.com/rahul148/PythonTraining.git
+$ git status
+$ cd PythonTraining/
+$ git status
+$ git add .(add all files which persent in the folder)
+
+$ git status
+
+$ git commit -m "This is my first commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+
+fatal: unable to auto-detect email address (got 'RAHUL'PC@DESKTOP-AE73QGH.(none)')
+
+
+RAHUL'PC@DESKTOP-AE73QGH MINGW64 /f/PythonCode/PythonTraining (master)
+$ git config --global user.email "rahulshinde1206148@gmail.com"
+
+
+RAHUL'PC@DESKTOP-AE73QGH MINGW64 /f/PythonCode/PythonTraining (master)
+$ git config --global user.name "Your Name"
+
+
+$ git config --global user.name "Rahul Shinde"
+
+
+$ git commit -m "This is my first commit"
+
+$ git push
+
+$ git status
+
+$ git add .
